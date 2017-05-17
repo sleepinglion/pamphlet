@@ -1,7 +1,15 @@
+@charset "utf-8";
 //= require fancybox
 
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: local('☺'),url(font-path('NanumGothic-Regular.eot?#iefix')) format('embedded-opentype'),url(font-path('NanumGothic-Regular.woff')) format('woff');
+}
+
+/* default */
 html,body {margin:0;padding:0;height: 100%}
 body { font-family: "Nanum Gothic","나눔고딕","Malgun Gothic","맑은 고딕","굴림",gulim,"돋움",Dotum,Arial,Helvetica, sans-serif;color:#333}
 label {vertical-align:middle;cursor:pointer}
@@ -70,11 +78,11 @@ header nav a { float: left; color: #333; font-size:1.3em; text-decoration: none}
 header nav a:hover {color:#000}
 header nav a:visited {color:#666}
 header nav a:active {color:red}
-header nav ul li ul {position:absolute;display:none}	
+header nav ul li ul {position:absolute;display:none}
 header #top_menu {position:absolute;right:10px;top:5px;margin:0;padding:0;list-style:none;z-index:9999}
 header #top_menu li {float:left;margin:0 15px 0 0;padding:0}
 
-/* aside */ 
+/* aside */
 aside {float:right;width:350px;margin:0}
 aside .box {margin-top:0}
 
@@ -122,7 +130,7 @@ footer address {margin-top:10px }
 #sl_intro_index article.b_red div.left div {float:left;width:45%;padding:10px 20px;background:#ccc;border-radius:5px;min-height:50px;text-align:center}
 #sl_intro_index article.b_red div.left div h4 {font-weight:bold;font-size:16px}
 #sl_intro_index article.b_red div.left div p {color:red;font-weight:bold;font-size:16px}
-#sl_intro_index article.b_red div.left div.r {float:right} 
+#sl_intro_index article.b_red div.left div.r {float:right}
 #sl_intro_index article.b_red div.right {background:#fff;border-radius:5px;margin:0 0 20px;padding:20px;height:100%;text-align:center}
 #sl_intro_index article.b_red div.right a {font-size:24px}
 #sl_intro_index article.b_gray {background:#eee;padding:20px}
@@ -145,9 +153,9 @@ footer address {margin-top:10px }
 
 
 /* contact */
-#sl_contact_new article.private_management {border:1px solid #ccc;padding:20px;margin:0 0 20px} 
+#sl_contact_new article.private_management {border:1px solid #ccc;padding:20px;margin:0 0 20px}
 #sl_contact_new article.private_management h3 {margin:0 0 10px;padding:0}
-#sl_contact_new input,label {vertical-align:middle} 
+#sl_contact_new input,label {vertical-align:middle}
 #contact_contact_category_id_1,#contact_contact_category_id_2 {margin:0;padding:0}
 #contact_contact_category_id_2 {margin-left:20px}
 #sl_contact_new .sl_radio label {margin:0 0 0 5px}
@@ -182,7 +190,7 @@ footer address {margin-top:10px }
 #sl_faq_index article {float:left;width:100%;margin:20px 0}
 #sl_faq_index article h3 {margin:0;padding:0}
 #sl_faq_index article h3 a {display:block;padding:10px}
-#sl_faq_index article h3 a:hover {text-decoration:none} 
+#sl_faq_index article h3 a:hover {text-decoration:none}
 
 /* portfolio */
 #sl_portfolio_index .media {border-bottom:1px dotted #ccc;padding-bottom:10px;margin-bottom:20px}
@@ -198,7 +206,7 @@ footer address {margin-top:10px }
 #main_main article {position:relative;float:left;width:100%;margin:0 0 3em;padding:0px}
 #main_main article h3 {float:left;width:100%;margin:0 0 1em;padding:0.5em 0;border-bottom:1px solid #ccc}
 #main_main a.more {position:absolute;top:0.5em;right:0;color:#999}
-#main_main .section_main2 article {margin-right:30px;width:220px} 
+#main_main .section_main2 article {margin-right:30px;width:220px}
 #main_main .section_main2 .article3 {float:right;margin-right:0}
 #main_main .section_main2 article ul {margin:0;padding:0;list-style:none}
 #main_main .section_main2 article li {margin:0.3em;padding:0}
@@ -335,7 +343,7 @@ h3.no_m {margin:0}
 	header {background:none;border-bottom:0;margin:1% 0}
 	header h1 {margin:2%;padding:0;font-size:1.6em}
 	header h1 a {float:left;background:none;text-indent:0;width:100%;font-weight:bold}
-	header h1 a:hover {text-decoration:none}  
+	header h1 a:hover {text-decoration:none}
 	header h1 a:active {color:red}
 	header nav.container {width:100%;margin:0;padding:0}
 	header nav ul {width:100%;margin:2% 0 0;padding:0;background:#fff;border-radius:5px}
@@ -352,7 +360,7 @@ h3.no_m {margin:0}
 	.sub_main {clear:both;width:100%}
 	#sl_main_blog li {margin-bottom:10px}
 	#main_main article ul {margin:0;padding:0;list-style:none}
-	#sl_intro_index #sl_intro_right {float:left;width:100%}  
+	#sl_intro_index #sl_intro_right {float:left;width:100%}
 	header nav ul a:hover {color:#000}
 	header nav ul a:active {color:red}
 	.page-header {float:left;margin:0 0 10px}
@@ -368,7 +376,7 @@ h3.no_m {margin:0}
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
 	header {height:8em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
-	header nav ul li:first-child {margin-left:0}	
+	header nav ul li:first-child {margin-left:0}
 	#sl_intro_index #sl_intro_right dd {width:200px}
 	footer {height:5em;border-top:1px solid #e7e7e7}
 	#mom {margin:-8em 0 -5em;min-height:100%}
@@ -384,4 +392,3 @@ h3.no_m {margin:0}
 	#main {padding-top:6em;padding-bottom:5em}
 	.ad_test {height:90px}
 }
-

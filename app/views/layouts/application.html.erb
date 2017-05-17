@@ -7,22 +7,17 @@
 	:description => @meta_description,
 	:keywords => @meta_keywords,
 	:separator => t(:title_separator),
-	:viewport => "width=device-width, initial-scale=1.0",
+	:viewport => "width=device-width, initial-scale=1.0, user-scalable=no",
 	:reverse => true %>
-<meta name="author" content="Sleeping-Lion" />
-<link rel="shortcut icon" href="<%=asset_path('favicon.ico') %>" />
-<%= stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css", :media => "all" %>
-<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-<%= csrf_meta_tags %>
-<!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-<![endif]-->
+	<meta name="author" content="Sleeping-Lion">
+	<link rel="shortcut icon" href="<%=asset_path 'favicon.ico' %>">
+	<%= stylesheet_link_tag "application", :media=>"all", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<![endif]-->
 </head>
 <body itemscope itemtype="<%=@page_itemtype%>">
-<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<%= stylesheet_link_tag "ie", media: "all", "data-turbolinks-track" => true %>
-<![endif]-->
 <%= render :partial => 'layouts/header' %>
 <section id="mom">
 	<section id="main" class="container">
@@ -32,10 +27,10 @@
 		<%= breadcrumbs :semantic=>true, style: :bootstrap %>
 		</div>
 		<% else %>
-		<%= render :partial => 'home/jumbotron' %>		
+		<%= render :partial => 'home/jumbotron' %>
 
 		<hr class="none">
-		<% end %>								
+		<% end %>
 		<section class="sub_main">
 	<%= render :partial => 'layouts/ad' %>
 				<%=yield %>
@@ -44,10 +39,7 @@
 	</section>
 </section>
 <%= render :partial => 'layouts/footer' %>
-<div class="slboard_overlay" id="overlay"></div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>
-<%= javascript_include_tag "//cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js" %>
-<%= javascript_include_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" %>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 <%= javascript_include_tag @script, "data-turbolinks-track" => true %>
 </body>
 </html>
