@@ -1,5 +1,5 @@
 set :application, 'sleepinglion'
-set :repo_url, 'git@github.com:sleepinglion/phamplet.git'
+set :repo_url, 'git@github.com:sleepinglion/pamphlet.git'
 set :branch, 'master'
 set :deploy_to, '/home/deploy/pamphlet'
 # set :scm, :git
